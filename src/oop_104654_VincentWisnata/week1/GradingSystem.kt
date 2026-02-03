@@ -4,5 +4,5 @@ fun main(){
     val name: String = "John Thor"
     val score: Int = 80
 
-    println("Name" + name + " Score" + score);
+    println("Name: ${name} Nilai: ${score}");
 }
