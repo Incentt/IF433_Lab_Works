@@ -3,7 +3,8 @@ package oop_104654_VincentWisnata.week1
 fun main() {
     val gameTitle = "John Wick";
     val price = 100000;
-    printReceipt(title = gameTitle, price = price)
+    val userNote: String? = ""
+    printReceipt(title = gameTitle, price = price, note = userNote)
 }
 
 fun calculateDiscount(price: Int): Int{
@@ -14,11 +15,13 @@ fun calculateDiscount(price: Int): Int{
     }
 }
 //Note dikarenakan output juga meminta harga original, saya ganti final price menjadi price - Vincent
-fun printReceipt(title: String, price: Int){
+fun printReceipt(title: String, price: Int, note: String?){
     println("============================")
     println("Nama Game: $title")
     println("Harga Produk: $price")
     println("Diskon: ${calculateDiscount(price)}")
     println("Harga Produk setelah diskon: ${price - calculateDiscount(price)}")
+    // Elvis Operator
+    println("Note: ${note ?: "Tidak ada catatan"}")
     println("============================")
 }
