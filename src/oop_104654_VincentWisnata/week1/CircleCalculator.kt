@@ -9,12 +9,12 @@ fun main(args: Array<String>) {
 // Output Concatenation
     println("Radius: ${radius}, Area: ${area}")
     // Logic check
-    checkSize(area)
+    println("Check Size: ${checkSize(area)}")
 }
-fun checkSize(area: Double) {
+fun checkSize(area: Double): String {
     if (area > 100) {
-        println("This is a Big Circle")
+        return "This is a Big Circle"
     } else {
-        println("This is a Small Circle")
+       return "This is a Small Circle"
     }
 }
