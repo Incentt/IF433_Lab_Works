@@ -4,6 +4,7 @@ import java.util.Scanner
 class Student(
     val name: String,
     val nim: String,
+    var gpa: Double = 0.0,
     var major: String,
 ){
     init {
@@ -13,7 +14,7 @@ class Student(
             print("LOG: Objek Student $name berhasil dialokasikan ke dalam memori")
         }
     }
-    constructor(name: String, nim: String): this(name, nim, "Non-Matriculated"){
+    constructor(name: String, nim: String, gpa: Double = 0.0): this(name, nim, gpa, "Non-Matriculated"){
     println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan)")
     }
 }
@@ -33,7 +34,7 @@ fun main(){
         print("Masukan Jurusan : ")
         val major = scanner.nextLine();
 
-        val s1 = Student(name, nim, major)
+        val s1 = Student(name, nim)
         println("Status Pendaftaran selesai.")
     }
 }
