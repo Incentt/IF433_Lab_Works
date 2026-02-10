@@ -6,13 +6,16 @@ class Student(
     val nim: String,
     var major: String,
 ){
-init {
-    if(nim.length != 5){
-        println("NIM  ${nim} Tidak valid, NIM berisi 5 karakter")
-    }else{
-        print("LOG: Objek Student $name berhasil dialokasikan ke dalam memori")
+    init {
+        if(nim.length != 5){
+            println("NIM  ${nim} Tidak valid, NIM berisi 5 karakter")
+        }else{
+            print("LOG: Objek Student $name berhasil dialokasikan ke dalam memori")
+        }
     }
-}
+    constructor(name: String, nim: String): this(name, nim, "Non-Matriculated"){
+    println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan)")
+    }
 }
 fun main(){
     val scanner = Scanner(System.`in`)
