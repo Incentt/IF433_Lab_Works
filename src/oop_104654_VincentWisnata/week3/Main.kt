@@ -15,4 +15,9 @@ fun main () {
     w.Damage = 9999
     println("Damage ${w.name}: ${w.Damage}")
     println("Tier ${w.name}: ${w.tier}")
+
+
+    val p = Player("Budi")
+    p.addXp(50)
+    p.addXp(80)
 }
