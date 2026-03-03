@@ -21,4 +21,9 @@ fun main(){
         }
     }
 
+
+    println(MathHelper().HitungLuas(2))
+    println(MathHelper().HitungLuas(2, 4))
+    println(MathHelper().HitungLuas( 12.0))
+
 }
