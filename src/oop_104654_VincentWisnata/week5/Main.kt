@@ -21,9 +21,12 @@ fun main(){
         }
     }
 
-
+println("TES MATEMATIKA")
+    println("Luas dari 2 adalah:")
     println(MathHelper().HitungLuas(2))
+    println("luas dari P = 2 dan L = 4 adalah")
     println(MathHelper().HitungLuas(2, 4))
+    println("Luas dari jari jari 12 adalah")
     println(MathHelper().HitungLuas( 12.0))
 
 }
