@@ -29,4 +29,18 @@ println("TES MATEMATIKA")
     println("Luas dari jari jari 12 adalah")
     println(MathHelper().HitungLuas( 12.0))
 
+    var EW = EWallet("vincent", 5000.0)
+    var CC = CreditCard("vincentCredit", 100000.0)
+    var paymentMethod: List<PaymentMethod> = listOf(EW, CC)
+    for (payment in paymentMethod){
+        when (payment){
+            is EWallet -> {
+                payment.processPayment(75000.0)
+            }
+            is CreditCard -> {
+                payment.processPayment(75000.0)
+            }
+        }
+    }
+
 }
