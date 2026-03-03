@@ -35,6 +35,7 @@ println("TES MATEMATIKA")
     for (payment in paymentMethod){
         when (payment){
             is EWallet -> {
+                payment.topUp(50000.0)
                 payment.processPayment(75000.0)
             }
             is CreditCard -> {
