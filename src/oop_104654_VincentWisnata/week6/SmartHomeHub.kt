@@ -12,4 +12,13 @@ class SmartHomeHub {
             }
         }
     }
+    fun activateSecurityMode(){
+        for (device in devices) {
+            when (device) {
+                is Recordable -> device.startRecord()
+                is SmartSpeaker -> device.playMusic("Sirine Peringatan")
+            }
+
+        }
+    }
 }
