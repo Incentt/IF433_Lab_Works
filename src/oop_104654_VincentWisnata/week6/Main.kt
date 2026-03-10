@@ -20,5 +20,11 @@ fun main(){
     val SL = SmartLamp("1", "Ruang Tamu")
     val SS = SmartSpeaker("2", "Google Nest Dapur")
     val SC = SmartCCTV("3", "Ezviz Garasi")
-    
+
+    val hub = SmartHomeHub()
+    hub.addDevice(SL)
+    hub.addDevice(SS)
+    hub.addDevice(SC)
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
 }
