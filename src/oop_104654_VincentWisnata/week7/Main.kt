@@ -35,4 +35,7 @@ fun main(){
         is ApiResponse.Error -> "Munculkan alert $response.message"
         else -> "LOADING..."
     }
+
+    GameManager.startGame()
+    GameManager.startGame()
 }
