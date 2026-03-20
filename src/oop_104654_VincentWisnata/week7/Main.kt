@@ -38,4 +38,8 @@ fun main(){
 
     GameManager.startGame()
     GameManager.startGame()
+    val Item = ItemRarity.LEGENDARY
+    println("Chance Item ${Item} adalah ${Item.dropChance} ")
+    val weapon = Weapon.forgeEpicSword()
+    println(weapon.item)
 }
