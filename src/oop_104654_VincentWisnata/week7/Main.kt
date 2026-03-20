@@ -42,4 +42,12 @@ fun main(){
     println("Chance Item ${Item} adalah ${Item.dropChance} ")
     val weapon = Weapon.forgeEpicSword()
     println(weapon.item)
+
+    val newWeapon = GameItem("Senjata Busuk", 10, ItemRarity.COMMON)
+    val upgradedweapon = newWeapon.copy(damage = 25)
+    val GameExecutor = GameExecutor()
+    GameExecutor.processEvent(BattleState.SafeZone)
+    GameExecutor.processEvent(BattleState.MonsterEcounter("Goblin Nakal"))
+    GameExecutor.processEvent(BattleState.LootDropped(upgradedweapon))
+    GameExecutor.processEvent(BattleState.GameOver("Terkena Jebakan Racun"))
 }
