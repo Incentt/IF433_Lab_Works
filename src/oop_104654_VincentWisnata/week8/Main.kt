@@ -13,11 +13,17 @@ fun main(){
         val tax = price * 0.11
         "Transaksi Valid. Harga RP $price, Pajak: $tax"
     } ?: "Transaksi Invalid: Harga belum di-set!"
-    print(receipt)
+    println(receipt)
 
     println("===== TEST SAFE CASTING =====");
     val mixedData: List<Any> = listOf(
         "Smartphone", 150000, UserProfile("Andi", null), "Laptop", 450000.0
     )
+    for(i in mixedData){
+        val text = i as? String
+        text?.let {
+            println("Ditemukan Text: ${it.uppercase()}")
+        }
+    }
 
 }
