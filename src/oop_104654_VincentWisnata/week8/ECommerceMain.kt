@@ -23,4 +23,9 @@ fun main() {
             println("[LOG] Data Korup Ditemukan: ${e.message}")
         }
     }
+    //    OUTPUT
+    //    Transaction ID: TRX-E01-SUCCESS
+    //    Transaction ID: TRX-C01-SUCCESS
+    //    Transaction ID: TRX-E02-SUCCESS
+    //    [LOG] Data Korup Ditemukan: API Invalid: Missing ID
 }
