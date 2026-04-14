@@ -14,4 +14,10 @@ fun main(){
         "Transaksi Valid. Harga RP $price, Pajak: $tax"
     } ?: "Transaksi Invalid: Harga belum di-set!"
     print(receipt)
+
+    println("===== TEST SAFE CASTING =====");
+    val mixedData: List<Any> = listOf(
+        "Smartphone", 150000, UserProfile("Andi", null), "Laptop", 450000.0
+    )
+
 }
