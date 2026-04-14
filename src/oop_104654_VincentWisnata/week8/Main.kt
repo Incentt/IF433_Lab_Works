@@ -38,4 +38,13 @@ fun main(){
         println("CRASH (NPE)! Jangan Gunakan !! secara sembarangan")
     }
 
+    val apiResponse: Map<String, String?> = mapOf("Status" to "200", "token" to null)
+    try {
+        val token = requireNotNull(apiResponse["Token"]){
+            "CRITICAL EXCEPTION: Token ototenkasi tidak ditemukan dari server!"
+        }
+    }catch (e: IllegalArgumentException){
+        println(e.message)
+    }
+
 }
