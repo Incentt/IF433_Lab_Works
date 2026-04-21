@@ -6,4 +6,10 @@ fun main(){
     println("\n === HOF Filter === ")
     val evens = numbers.filter { it % 2 == 0 }
     print("Evens Only: $evens")
+
+    println("=== HOF Maps ===")
+    val multiplied = numbers.map { it * 10 }
+    val asStrings = multiplied.map { "RP ${it}k" }
+    println("Multiplied: $multiplied")
+    println("Formatted: $asStrings")
 }
