@@ -12,4 +12,9 @@ fun main() {
     val itemPrice = PairBox("Bitcoin", 100000)
     println("Aset ${itemPrice.key}, Harga:  ${itemPrice.value}USD")
 
+    println("=== TEST GENERIC FUNCTION ===")
+    printData(3.14)
+    val result = processData("Stable Coins")
+    println("Hasil proses: $result")
+
 }
