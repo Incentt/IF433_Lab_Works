@@ -4,4 +4,7 @@ class MathBox<T: Number>(var value1: T, var value2: T){
     fun Sum() : Double{
         return value1.toDouble() + value2.toDouble()
     }
+    fun <T> getMax(a: T, b: T) : T where T: Comparable<T>{
+        return if (a > b) a else b
+    }
 }
