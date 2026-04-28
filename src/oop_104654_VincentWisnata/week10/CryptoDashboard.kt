@@ -18,4 +18,5 @@ fun main(){
     println("\nDaftar Transaksi:")
     txRepo.getAll().forEach { tx ->
         println("ID: ${tx.id}, Amount: ${tx.amount}")
-    }}
+    }
+}
