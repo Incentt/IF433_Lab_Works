@@ -5,9 +5,15 @@ fun main() {
     val name: String? = "Alexander"
 
     val length = name?.let {
-
         println("Nama Terdeteksi: $it")
         it.length
     }
     println("Panjang Nama $length")
+
+    println("=== TEST RUN FUNCTION ===")
+    val result = "Kotlin".run {
+        println("Memproses kata: ${this}")
+        length
+    }
+    println("Hasil kalkulasi run: $result")
 }
