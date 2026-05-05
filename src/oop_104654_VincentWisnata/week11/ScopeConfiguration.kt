@@ -15,4 +15,10 @@ println("=== TEST APPLY ===")
         println("Log sebelum ditambah ${it}")
     }.add(4)
     println("Setelah ditambah ${numbers}")
+
+    println("=== TEST WITH ===")
+    with(user){
+        println("User Detail -> Nama:${name}, Umur: ${age}")
+    }
+
 }
