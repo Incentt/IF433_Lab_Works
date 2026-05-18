@@ -13,3 +13,6 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
     }
     return requestedGram
 }
+fun main(){
+    var currentKibbleStock = 50.0;
+}
