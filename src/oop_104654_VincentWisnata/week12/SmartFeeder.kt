@@ -39,4 +39,8 @@ fun main(){
     }.onFailure {error ->
         println("Peringatan ke pemilik: ${error.message}")
     }
+    //PRINT RESULT
+    //    Kibble tidak cukup! Diminta 80 gr, sisa 50 gr
+    //    Siklus pengecekan dispenser pagi selesai.
+    //    Makan sore sukses! Sisa stok kibble: 30 gr
 }
