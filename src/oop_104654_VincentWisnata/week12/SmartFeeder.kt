@@ -14,7 +14,7 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
     return requestedGram
 }
 fun main(){
-    var currentKibbleStock = 50.0;
+    var currentKibbleStock = 50;
     try {
         dispenseKibble( 80, currentKibbleStock, false)
     }catch (e: FoodEmptyException){
@@ -23,6 +23,8 @@ fun main(){
         println(e.message)
     }catch (e: Exception){
         println("Something went wrong ${e.message}")
+    }finally {
+        println("Siklus pengecekan dispenser pagi selesai.")
     }
 
 }
