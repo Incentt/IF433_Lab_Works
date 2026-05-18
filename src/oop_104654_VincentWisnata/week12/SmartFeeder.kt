@@ -9,7 +9,7 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
         throw DispenserJamException()
     }
     if (requestedGram > availableGram) {
-        throw FoodEmptyException(requestedGram, requestedGram)
+        throw FoodEmptyException(requestedGram, availableGram)
     }
     return requestedGram
 }
@@ -27,4 +27,15 @@ fun main(){
         println("Siklus pengecekan dispenser pagi selesai.")
     }
 
+    runCatching {
+        dispenseKibble(
+            requestedGram = 30,
+            availableGram = 1000,
+            isJammed = false
+        )
+    }.onSuccess {
+        println("Berhasil mengeluarkan $it gr kibble")
+    }.onFailure {
+        println("Terjadi error: ${it.message}")
+    }
 }
