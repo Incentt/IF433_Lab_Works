@@ -10,4 +10,17 @@ fun main() {
         -1
     }
     println("Hasil parsing ${   result  }")
+
+    println("=== TEST Multiple CATCH ===")
+    val account = BankAccount(100.0)
+    try {
+        account.withdraw(150.0)
+    }catch (e: InsufficentFundsException){
+        println("Caught Domain Error: Uang Tidak Cukup. ${e.message}")
+    }catch (e: IllegalArgumentException){
+        println("Caught Domain Error: Input tidak valid. ${e.message}")
+    }catch (e: Exception){
+        println("Caught General Error: Terjadi kesalahan tidak terduga ${e.message}")
+    }
+
 }
