@@ -74,4 +74,9 @@ fun main() {
 
     saveTrades(trades, "${src}crypto_trades.csv")
     println("Data trade berhasil disimpan ke crypto_trades.csv")
+
+    File("${src}crypto_trades.csv")
+        .appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+
+    println("Data trade & data korup berhasil ditulis.")
 }
