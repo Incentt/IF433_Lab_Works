@@ -45,3 +45,33 @@ fun loadTrades(path: String): List<TradeRecord> {
         emptyList()
     }
 }
+
+fun main() {
+    val src = "/Users/incent/Documents/UMN/IF433_Lab_Works/IF433_Lab_Works/src/oop_104654_VincentWisnata/week13/"
+    val trades = listOf(
+        TradeRecord(
+            id = 1,
+            symbol = "BTCUSDT",
+            type = "Long",
+            margin = 1500.0,
+            pnl = 320.5
+        ),
+        TradeRecord(
+            id = 2,
+            symbol = "ETHUSDT",
+            type = "Short",
+            margin = 800.0,
+            pnl = -120.75
+        ),
+        TradeRecord(
+            id = 3,
+            symbol = "SOLUSDT",
+            type = "Long",
+            margin = 500.0,
+            pnl = 95.25
+        )
+    )
+
+    saveTrades(trades, "${src}crypto_trades.csv")
+    println("Data trade berhasil disimpan ke crypto_trades.csv")
+}
