@@ -79,4 +79,12 @@ fun main() {
         .appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
 
     println("Data trade & data korup berhasil ditulis.")
+
+    val loadedData = loadTrades("${src}crypto_trades.csv")
+    val totalPnL = loadedData.sumOf { it.pnl }
+
+    println("\n=== LOADED TRADE DATA ===")
+    loadedData.forEach { println(it) }
+
+    println("\nTotal Net PnL: $totalPnL")
 }
