@@ -10,8 +10,7 @@ data class TradeRecord(
     val margin: Double,
     val pnl: Double)
 
-fun TradeRecord.toCsv(): String = "$id,$symbol,$margin,$pnl"
-
+fun TradeRecord.toCsv(): String = "$id,$symbol,$type,$margin,$pnl"
 fun fromCsvTrade(line: String): TradeRecord? {
     return try {
         val parts = line.split(",")
@@ -76,7 +75,7 @@ fun main() {
     println("Data trade berhasil disimpan ke crypto_trades.csv")
 
     File("${src}crypto_trades.csv")
-        .appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+        .appendText("\nCORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
 
     println("Data trade & data korup berhasil ditulis.")
 
